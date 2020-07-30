@@ -3,13 +3,14 @@
  */
 const express = require('express');
 const mongoose = require('mongoose');
-const app = express();
 
 require("./models/Receita");
 const Receita = mongoose.model('receita');
 
 require("./models/Ingrediente");
 const Ingrediente = mongoose.model('ingrediente');
+
+const app = express();
 
 app.use(express.json());
 
