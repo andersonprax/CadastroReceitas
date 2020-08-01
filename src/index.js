@@ -11,10 +11,11 @@ const app = express();
 
 app.use(express.json());
 
+
+
 /**
  * Configuração do banco de dados
  */
-
  mongoose.connect(
      "mongodb://localhost/cadastroreceitas", {
      useNewUrlParser: true,
@@ -25,10 +26,11 @@ app.use(express.json());
     console.log("Erro: Conexão com MongoDB não foi realizada com sucesso!");
  });
 
+
+
  /**
  * Rotas de acesso ao banco de dados RECEITA (CRUD)
  */
-
  app.get("/receita/:id", (req,res) => {
      Receita.findOne({_id: req.params.id}).then((receita) => {
         return res.json(receita);
@@ -93,10 +95,11 @@ app.delete("/receita/:id", (req,res) => {
     });
 });
 
+
+
  /**
  * Rotas de acesso ao banco de dados INGREDIENTE (CRUD)
  */
-
 app.get("/ingrediente/:id", (req,res) => {
     Ingrediente.findOne({_id: req.params.id}).then((ingrediente) => {
        return res.json(ingrediente);
@@ -161,9 +164,9 @@ app.delete("/ingrediente/:id", (req,res) => {
    });
 });
 
+
+
 /**
  * Server
  */
-app.listen(process.env.PORT || 3000, () => {
-    console.log("Servidor iniciado na porta 8080: http://localhost:8080/");
-});
+app.listen(process.env.PORT || 3000);
