@@ -2,7 +2,7 @@
   "name": "cadastroreceitas",
   "version": "1.0.0",
   "description": "Sistema de cadastramento de receitas para empresa de alimentação que necessita informatizar essas receitas produzidas e comercializadas por ela no varejo.",
-  "main": "/backend/src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
