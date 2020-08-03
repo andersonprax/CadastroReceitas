@@ -17,7 +17,7 @@ app.use(express.json());
  * Configuração do banco de dados
  */
  mongoose.connect(
-     "mongodb://localhost/cadastroreceitas", {
+     process.env.MONGO_URL, {
      useNewUrlParser: true,
      useUnifiedTopology:true
  }).then(() => {

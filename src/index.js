@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const db = require ("./config/db")
 
 require("./models/Receita");
 const Receita = mongoose.model('receita');
@@ -17,7 +18,7 @@ app.use(express.json());
  * Configuração do banco de dados
  */
  mongoose.connect(
-     "mongodb://localhost/cadastroreceitas", {
+     db.MONGO_URL, {
      useNewUrlParser: true,
      useUnifiedTopology:true
  }).then(() => {
