@@ -7,7 +7,7 @@ class RetrofitConfig {
 
 
         val retrofit = Retrofit.Builder()
-            .baseUrl( "http://192.168.1.11:3000")
+            .baseUrl( "https://cadastro-receitas.herokuapp.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
